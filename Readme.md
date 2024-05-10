@@ -6,7 +6,8 @@ Learing back-end along side with projects.
 
 # Notes:-
 
-### Imp points while database connectivity.
+# Imp points while database connectivity.
+## 1. From first Approach
 1. When connecting to databases, handling potential data-not-found scenarios is essential. Employ try/catch blocks or promises to manage errors or we can also use promises.
 
 key to remember : ( wrap in try-catch )
