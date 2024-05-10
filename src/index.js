@@ -9,6 +9,7 @@ dotenv.config({
 
 
 import connectDB from './db/index.js';
+import { app } from './app.js';
 
 // Thisis how we connnet to DB acco to mongoose doc.
 // const connect= mongoose.connect('') 
@@ -49,3 +50,16 @@ const app=express()
 /** 2)Approach to connect to DB.(importing the db function defined file.) and executing it in main file(index.js) like below */
 
 connectDB()
+//by importing the connectDB function file which is async code. After execution of this function we 'promise'(.then() and .catch()).
+.then(()=>{
+    app.on('error',(error)=>{  
+        console.log('Errpr:',error)
+        throw error
+    })
+   app.listen(process.env.PORT || 8000,()=>{
+    console.log(`Server is up and running on port ${process.env.PORT}` )
+   }) 
+})
+.catch((err)=>{
+    console.log("MONGODB connection failed!!:",err);
+})
