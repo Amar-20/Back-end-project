@@ -19,7 +19,7 @@ const user_schema = new Schema(
         type:[
             {
               type:Schema.Types.ObjectId,
-              ref:'video**'  
+              ref:'video'  
             }
         ]
      },

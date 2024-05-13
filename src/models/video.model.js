@@ -37,7 +37,8 @@ const video_schema = new Schema(
             type:Schema.Types.ObjectId,
             ref:'User'
         }
-    },{
+    },
+    {
         timestamps:true
     }
 )
