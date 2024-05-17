@@ -2,7 +2,7 @@
 
 Learing back-end along side with projects.
 
-[Project Model link](https://app.eraser.io/workspace/YtPqZ1VogxGy1jzIDkzj)
+[Project Model link](https://app.eraser.io/workspace/GTmlXaD6dcql2E2EBiwr?origin=share)
 
 # Notes:-
 
