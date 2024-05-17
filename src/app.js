@@ -1,5 +1,6 @@
 import express from 'express';
-import cors from 'cors';
+// Cross Origin Resource Sharing. 
+import cors from 'cors';  
 import cookieParser from 'cookie-parser';
 
 const app = express()
