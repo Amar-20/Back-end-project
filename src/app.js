@@ -17,6 +17,15 @@ app.use(express.static('public'))
 // We can safely access the clients web browser cookies, perform some opeations on it and aslo safely put some cookies.
 app.use(cookieParser())
 
-app.get((req,res)={})
+
+//routes
+
+import userRouter from './routes/user.routes.js';
+
+//routes declaration
+app.use('/api/v1/users',userRouter)
+//http://localhost:8000/api/v1/users/
+
+
 
 export {app}
