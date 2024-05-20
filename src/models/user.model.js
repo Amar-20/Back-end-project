@@ -1,4 +1,6 @@
 // adding user and video model, jwt, bcrypt and user_def methods.
+// used bcrypt to hash the password.
+//json web token(jwt) to create unique tokens.
 
 
 import mongoose,{Schema} from "mongoose";
@@ -12,7 +14,7 @@ const user_schema = new Schema(
         required:true,
         unique:true,
         trim:true,
-        index:true,
+        index:true,// to make it searchable
         lowercase:true
      },
      watchHistry:{
@@ -73,8 +75,8 @@ const user_schema = new Schema(
               email:this.email,
               username:this.username,
               fullName:this.fullName
-            },
-            process.env.ACCESS_TOKEN_SECRET,
+            },//payload
+            process.env.ACCESS_TOKEN_SECRET,  //access token
             {
                 expiresIn:process.env.ACCESS_TOKEN_EXPIRY
             }
